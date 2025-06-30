@@ -1,0 +1,112 @@
+.admin-tickets-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--primary-black);
+  color: var(--text-light);
+}
+
+.tickets-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tickets-header h1 {
+  color: var(--secondary-orange);
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1em;
+}
+
+.status-filter select {
+  background-color: var(--input-bg);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.status-filter select:focus {
+  outline: none;
+  border-color: var(--secondary-orange);
+}
+
+.tickets-list-container {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.tickets-list {
+  display: grid;
+  gap: 20px;
+  
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.ticket-card {
+  background-color: #2a2a2a; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.ticket-info {
+  flex-grow: 1;
+}
+
+.ticket-info h3 {
+  margin: 0 0 10px 0;
+  color: var(--secondary-orange);
+  font-size: 1.3em;
+}
+
+.ticket-info p {
+  margin: 5px 0;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.ticket-status {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: var(--primary-black);
+}
+
+
+.ticket-status.open {
+  background-color: #ffc107; 
+}
+
+.ticket-status.pending {
+  background-color: #17a2b8;
+}
+
+.ticket-status.closed {
+  background-color: #28a745; 
+}
